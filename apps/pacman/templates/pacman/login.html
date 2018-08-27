@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Log-in or Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pacman/css/style.css' %}" />
+    <script src="{% static 'pacman/js/script.js' %}"></script>
+</head>
+<body>
+<div class="login_container">
+    <h1>This is login and reg</h1>
+    <form action="{% url 'process_login' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="user_id" value="1">
+        <input type="submit" value="Login">
+    </form>
+</div>
+</body>
+</html>

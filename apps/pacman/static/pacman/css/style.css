@@ -1,0 +1,25 @@
+/* TAGS FOR ENTIRE SITE */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+
+/* LOGIN PAGE */
+div.login_container {
+    background-color:black;
+}
+
+/* GAME PAGE */
+div.game_container {
+    background-color: red;
+}
+
+
+/* PROFILE PAGE */
+
+
+
+/* FEEDBACK PAGE */

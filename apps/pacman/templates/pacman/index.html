@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Let's Play Pacman!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pacman/css/style.css' %}" />
+    <script src="{% static 'pacman/js/script.js' %}"></script>
+</head>
+<body>
+<div class="game_container">
+    <h1>This is the game</h1>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</div>
+</body>
+</html>
