@@ -10,8 +10,9 @@
 <body>
 <div class="game_container">
     <h1>This is the game</h1>
-
-    <a href="{% url 'logout' %}">Logout</a>
+    <form action="{% url 'logout' %}">
+        <input type="submit" value="Logout">
+    </form>
 </div>
 </body>
 </html>
