@@ -5,14 +5,24 @@
     <title>Let's Play Pacman!</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'pacman/css/style.css' %}" />
+    <link rel="icon" href="{% static 'pacman/img/pacman_logo_circular_color.png' %}" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'pacman/js/script.js' %}"></script>
 </head>
 <body>
 <div class="game_container">
+    <div class="header">
+        <h1 class="page_header">{{ header_text }}</h1>
+        <a href="{% url 'all_scores' %}" class="top_score">{{ top_score }}</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
     <h1>This is the game</h1>
-    <form action="{% url 'logout' %}">
-        <input type="submit" value="Logout">
-    </form>
+    <div id="game_world">
+        <div id="world"></div>
+        <div id="pacman"></div>
+        <div id="score"></div>
+    </div>
+    
 </div>
 </body>
 </html>

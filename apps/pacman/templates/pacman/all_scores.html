@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Log-in or Register</title>
+    <title>High Scores!</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'pacman/css/style.css' %}" />
     <link rel="icon" href="{% static 'pacman/img/pacman_logo_circular_color.png' %}" type="image/x-icon" />
@@ -10,14 +10,12 @@
     <script src="{% static 'pacman/js/script.js' %}"></script>
 </head>
 <body>
-<div class="login_container">
-    <img src="{% static 'pacman/img/pacman_logo_circular_color.png' %}" alt="Logo" class="main_logo">
-    <h1>This is login and reg</h1>
-    <form action="{% url 'process_login' %}" method="POST">
-        {% csrf_token %}
-        <input type="hidden" name="user_id" value="1">
-        <input type="submit" value="Login">
-    </form>
+<div class="all_scores_container">
+    <div class="header">
+        <h1 class="page_header">These are {{ user.username }}'s High Scores</h1>
+        <a href="{% url 'home' %}">Go Back</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
 </div>
 </body>
 </html>

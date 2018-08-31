@@ -4,17 +4,96 @@ body {
     padding: 0px;
     margin: 0px;
     color: white;
+    background-color:black;
+}
+
+img.main_logo {
+    border-radius:50%;
+    width:100px;
+    height:100px;
 }
 
 
 /* LOGIN PAGE */
 div.login_container {
-    background-color:black;
+    /* background-color:black; */
 }
 
 /* GAME PAGE */
 div.game_container {
-    background-color: red;
+    /* background-color: red; */
+}
+
+div#game_world {
+    position: relative;
+    display:inline-block;
+    left:calc(50% - 400px);
+
+}
+
+div#world {
+    font-size: 0px;
+}
+
+div.brick {
+    background-color:blue;
+    width: 40px;
+    height:40px;
+}
+
+div.empty {
+    width: 40px;
+    height:40px;
+}
+
+div.dot {
+    background: url('/static/pacman/img/medium_white_dot.png') no-repeat center;
+    background-size:contain;
+    width: 40px;
+    height: 40px;
+}
+
+div.cookie {
+    background: url('/static/pacman/img/large_white_dot.png') no-repeat center;
+    background-size:contain;
+    width: 40px;
+    height: 40px;
+}
+
+div.cherry {
+    background-image: url('/static/pacman/img/cherry.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+div#pacman {
+    background-image: url('/static/pacman/img/pacman-right.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+    div.row div {
+        display:inline-block;
+    }
+
+div#score {
+    border: 1px solid white;
+    width: 100px;
+    height: 40px;
+    text-align:center;
+    display: inline-block;
+    padding-top: 20px;
+    position: absolute;
+    top: 0px;
+    left: 800px;
 }
 
 
