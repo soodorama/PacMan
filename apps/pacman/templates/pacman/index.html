@@ -13,16 +13,19 @@
 <div class="game_container">
     <div class="header">
         <h1 class="page_header">{{ header_text }}</h1>
-        <a href="{% url 'all_scores' %}" class="top_score">{{ top_score }}</a>
+        <h1 class="top_score">{{ top_score }}</h1>
         <a href="{% url 'logout' %}">Logout</a>
     </div>
-    <h1>This is the game</h1>
-    <div id="game_world">
-        <div id="world"></div>
-        <div id="pacman"></div>
-        <div id="score"></div>
+    <div id="total_game">
+        <div id="game_title">
+            <h1 id="game_level">Level {{ level }}</h1>
+            <h1 id="score"></h1>
+        </div>
+        <div id="game_world">
+            <div id="world"></div>
+            <div id="pacman"></div>
+        </div>
     </div>
-    
 </div>
 </body>
 </html>

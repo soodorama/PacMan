@@ -13,6 +13,33 @@ img.main_logo {
     height:100px;
 }
 
+div.header {
+    widows: 100%;
+    height: 100px;
+}
+
+    div.header h1 {
+        display: inline-block;
+    }
+
+        div.header h1.top_score {
+            position: absolute;
+            right:5px;
+        }
+
+    div.header a {
+        text-decoration: none;
+        color: white;
+        padding: 2px;
+        background-color: grey;
+        border-radius: 5px;
+        display: block;
+        text-align:center;
+        width: 55px;
+        position: absolute;
+        right:5px;
+    }
+
 
 /* LOGIN PAGE */
 div.login_container {
@@ -24,11 +51,16 @@ div.game_container {
     /* background-color: red; */
 }
 
-div#game_world {
-    position: relative;
-    display:inline-block;
+div#total_game {
+    position:relative;
+    width: 800px;
     left:calc(50% - 400px);
+}
 
+div#game_world {
+    /* position: relative; */
+    display:inline-block;
+    /* top: 40px; */
 }
 
 div#world {
@@ -54,13 +86,13 @@ div.dot {
 }
 
 div.cookie {
-    background: url('/static/pacman/img/board/large_white_dot.png') no-repeat center;
+    background: url('/static/pacman/img/board/cookie_2.png') no-repeat center;
     background-size:contain;
     width: 40px;
     height: 40px;
 }
 
-div.cherry {
+div#cherry {
     background-image: url('/static/pacman/img/board/cherry.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -68,6 +100,9 @@ div.cherry {
     width: 40px;
     height: 40px;
     position: absolute;
+    top: 560;
+    left: 360px;
+    display: none;
 }
 
 div#pacman {
@@ -80,22 +115,82 @@ div#pacman {
     position: absolute;
 }
 
+div#red_ghost{
+    background-image: url('/static/pacman/img/ghosts/ghost_red_right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+div#orange_ghost{
+    background-image: url('/static/pacman/img/ghosts/ghost_orange_right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+div#cyan_ghost{
+    background-image: url('/static/pacman/img/ghosts/ghost_cyan_right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+div#green_ghost{
+    background-image: url('/static/pacman/img/ghosts/ghost_green_right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
     div.row div {
         display:inline-block;
     }
 
-div#score {
-    border: 1px solid white;
-    width: 100px;
+div#game_title {
+    /* position:absolute;
+    top:10px; */
+    width: 750px;
     height: 40px;
-    text-align:center;
-    display: inline-block;
-    padding-top: 20px;
-    position: absolute;
-    top: 0px;
-    left: 800px;
+    /* margin: 0 auto; */
 }
 
+    div#game_title h1 {
+        margin: 0px;
+    }
+
+    h1#game_level {
+        /* margin: 0px; */
+        /* position: absolute; */
+        /* top: 70px; */
+        /* left: 80px; */
+        display: inline-block;
+    }
+
+    h1#score {
+        /* border: 1px solid white; */
+        /* width: 100px; */
+        /* height: 40px; */
+        text-align:center;
+        display: inline-block;
+        /* padding-top: 20px; */
+        position: absolute; 
+        /* top: 60px; */
+        right: 40px;
+        /* font-size: 30px; */
+    }
 
 /* PROFILE PAGE */
 

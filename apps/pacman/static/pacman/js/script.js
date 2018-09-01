@@ -10,9 +10,9 @@ $(document).ready(function() {
         [2,2,2,2,1,2,2,2,1,2,1,2,2,2,1,2,2,2,2],
         [0,0,0,2,1,2,0,0,0,0,0,0,0,2,1,2,0,0,0],
         [0,0,0,2,1,2,0,2,2,0,2,2,0,2,1,2,0,0,0],
-        [2,2,2,2,1,2,0,2,0,0,0,2,0,2,1,2,2,2,2],
-        [0,0,0,0,1,0,0,2,0,0,0,2,0,0,1,0,0,0,0],
-        [2,2,2,2,1,2,0,2,0,0,0,2,0,2,1,2,2,2,2],
+        [2,2,2,2,1,2,0,2,5,6,0,2,0,2,1,2,2,2,2],
+        [0,0,0,0,1,0,0,2,0,7,0,2,0,0,1,0,0,0,0],
+        [2,2,2,2,1,2,0,2,0,0,8,2,0,2,1,2,2,2,2],
         [0,0,0,2,1,2,0,2,2,2,2,2,0,2,1,2,0,0,0],
         [0,0,0,2,1,2,0,0,0,0,0,0,0,2,1,2,0,0,0],
         [2,2,2,2,1,2,0,2,2,2,2,2,0,2,1,2,2,2,2],
@@ -32,6 +32,8 @@ $(document).ready(function() {
     }
 
     var score = 0;
+    var count = 0;
+    var total_dots = 154;
 
     function displayWorld() {
         var output = "";
@@ -39,10 +41,22 @@ $(document).ready(function() {
         for (var i = 0; i < world.length; i++) {
             output += "\n<div class='row'>"
             for (var j = 0; j < world[i].length; j++) {
-                if (world[i][j] == 4) {
-                    output += "\n\t<div class='cherry'></div>"
+                if (world[i][j] == 8) {
+                    output += "\n\t<div id='orange_ghost'></div>"
                 }
-                if (world[i][j] == 3) {
+                if (world[i][j] == 7) {
+                    output += "\n\t<div id='red_ghost'></div>"
+                }
+                else if (world[i][j] == 6) {
+                    output += "\n\t<div id='green_ghost'></div>"
+                }
+                else if (world[i][j] == 5) {
+                    output += "\n\t<div id='cyan_ghost'></div>"
+                }
+                else if (world[i][j] == 4) {
+                    output += "\n\t<div id='cherry'></div>"
+                }
+                else if (world[i][j] == 3) {
                     output += "\n\t<div class='cookie'></div>";
                 }
                 else if (world[i][j] == 2) {
@@ -69,19 +83,12 @@ $(document).ready(function() {
     function displayScore() {
         $("#score").html(score);
     }
-
-    var cherry = {
-        x: 9,
-        y: 14,
-        interval : 0
-    }
     
     function displayCherry() {
-        cherry.interval = Math.floor(Math.random()*5) + 1
         setTimeout(function() {
-            world[cherry.y][cherry.x] = 4
-            displayWorld();
-        }, cherry.interval*1000)
+            $("#cherry").css("display","inline-block")
+            // displayWorld();
+        }, Math.floor(Math.random()*10) + 5*1000)
     }
 
     displayCherry();
@@ -133,8 +140,14 @@ $(document).ready(function() {
         if (world[pacman.y][pacman.x] == 1) { // dots
             score += 10;
             world[pacman.y][pacman.x] = 0;
-            displayScore();
-            displayWorld();
+            if (count == total_dots) {
+                alert("you win");
+
+            }
+            else {
+                displayScore();
+                displayWorld();
+            }
         }
         else if (world[pacman.y][pacman.x] == 3) { // cookie
             world[pacman.y][pacman.x] = 0;
