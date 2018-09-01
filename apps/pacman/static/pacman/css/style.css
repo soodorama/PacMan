@@ -47,21 +47,21 @@ div.empty {
 }
 
 div.dot {
-    background: url('/static/pacman/img/medium_white_dot.png') no-repeat center;
+    background: url('/static/pacman/img/board/medium_white_dot.png') no-repeat center;
     background-size:contain;
     width: 40px;
     height: 40px;
 }
 
 div.cookie {
-    background: url('/static/pacman/img/large_white_dot.png') no-repeat center;
+    background: url('/static/pacman/img/board/large_white_dot.png') no-repeat center;
     background-size:contain;
     width: 40px;
     height: 40px;
 }
 
 div.cherry {
-    background-image: url('/static/pacman/img/cherry.png');
+    background-image: url('/static/pacman/img/board/cherry.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -71,7 +71,7 @@ div.cherry {
 }
 
 div#pacman {
-    background-image: url('/static/pacman/img/pacman-right.gif');
+    background-image: url('/static/pacman/img/pacman/pacman-right.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;

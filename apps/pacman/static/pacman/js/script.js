@@ -93,7 +93,7 @@ $(document).ready(function() {
         console.log(e.keyCode);
         if (e.keyCode == 37) { // left
             e.preventDefault();
-            $("#pacman").css("background-image","url('/static/pacman/img/pacman-left.gif')")
+            $("#pacman").css("background-image","url('/static/pacman/img/pacman/pacman-left.gif')")
            if (world[pacman.y][pacman.x-1] != 2 && pacman.x-1 != -1) {
                pacman.x -= 1;
             }
@@ -103,7 +103,7 @@ $(document).ready(function() {
         }
         else if (e.keyCode == 39) { // right
             e.preventDefault();
-            $("#pacman").css("background-image","url('/static/pacman/img/pacman-right.gif')")
+            $("#pacman").css("background-image","url('/static/pacman/img/pacman/pacman-right.gif')")
             if (world[pacman.y][pacman.x+1] != 2 && pacman.x+1 != 19) { 
                 pacman.x += 1;
             }
@@ -113,21 +113,21 @@ $(document).ready(function() {
         }
         else if (e.keyCode == 38) { // up
             e.preventDefault();
-            $("#pacman").css("background-image","url('/static/pacman/img/pacman-up.gif')")
+            $("#pacman").css("background-image","url('/static/pacman/img/pacman/pacman-up.gif')")
             if (world[pacman.y-1][pacman.x] != 2) { 
                 pacman.y -= 1;
             }
         }
         else if (e.keyCode == 40) { // down
             e.preventDefault();
-            $("#pacman").css("background-image","url('/static/pacman/img/pacman-down.gif')")
+            $("#pacman").css("background-image","url('/static/pacman/img/pacman/pacman-down.gif')")
             if (world[pacman.y+1][pacman.x] != 2) {
                 pacman.y += 1;
             }
         }
         else if (e.keyCode == 75) { // for testing, kill pacman with "k"
             e.preventDefault();
-            $("#pacman").css("background-image","url('/static/pacman/img/pacman-dying-no-loop.gif')")
+            $("#pacman").css("background-image","url('/static/pacman/img/pacman/pacman-dying-no-loop.gif')")
         }
 
         if (world[pacman.y][pacman.x] == 1) { // dots
