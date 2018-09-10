@@ -139,6 +139,7 @@ $(document).ready(function() {
 
         if (world[pacman.y][pacman.x] == 1) { // dots
             score += 10;
+            count++;
             world[pacman.y][pacman.x] = 0;
             if (count == total_dots) {
                 alert("you win");
